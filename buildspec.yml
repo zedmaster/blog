@@ -2,11 +2,13 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
+    runtime-versions:
+      ruby: 2.6
   build:
     commands:
+      - gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
       - echo "******** Building Jekyll site ********"
       - bundle exec jekyll build
       - echo "******** Uploading to S3 ********"
       - aws s3 sync --delete _site/ s3://uzed.com.br
+
