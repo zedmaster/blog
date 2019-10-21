@@ -4,9 +4,9 @@ phases:
   install:
     runtime-versions:
       ruby: 2.6
-    install:
-      commands:
-          - bundle install
+    commands:
+        - echo "**** bundle install ****"
+        - bundle install
   build:
     commands:
       #- gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
