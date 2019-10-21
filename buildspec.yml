@@ -13,7 +13,7 @@ phases:
     commands:
       #- gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
       - echo "******** Building Jekyll site ********"
-      - jekyll build
+      - bundle exec jekyll build
       - echo "******** Uploading to S3 ********"
       - aws s3 sync --delete _site/ s3://uzed.com.br
 
