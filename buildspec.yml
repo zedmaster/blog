@@ -3,12 +3,10 @@ version: 0.1
 phases:
   install:
     commands:
-      - gem install bundler
-      - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-      - apt-get install nodejs
-      - bundle install
+      - gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
   build:
     commands:
+      - echo "******** Building Jekyll site ********"
       - bundle exec jekyll build
+      - echo "******** Uploading to S3 ********"
       - aws s3 sync --delete _site/ s3://uzed.com.br.s3-website-us-east-1.amazonaws.com
-        #      - aws cloudfront create-invalidation --distribution-id XXXXXXXXX --paths '/*'
