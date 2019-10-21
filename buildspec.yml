@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       ruby: 2.6
     commands:
-        - echo "**** gem install bundler ****"
-        - gem install bundler
+        - echo "**** gem install jekyll bundler ****"
+        - gem install jekyll bundler
         - echo "**** bundle install ****"
         - bundle install
   build:
