@@ -10,5 +10,5 @@ phases:
   build:
     commands:
       - bundle exec jekyll build
-      - aws s3 sync --delete _site/ s3://_site
+      - aws s3 sync --delete _site/ s3://uzed.com.br.s3-website-us-east-1.amazonaws.com
         #      - aws cloudfront create-invalidation --distribution-id XXXXXXXXX --paths '/*'
