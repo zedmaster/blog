@@ -4,9 +4,12 @@ phases:
   install:
     runtime-versions:
       ruby: 2.6
+    install:
+      commands:
+          - bundle install
   build:
     commands:
-      - gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
+      #- gem install jekyll jekyll-paginate jekyll-sitemap jekyll-gist
       - echo "******** Building Jekyll site ********"
       - jekyll build
       - echo "******** Uploading to S3 ********"
