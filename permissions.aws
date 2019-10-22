@@ -1,0 +1,34 @@
+Liberando bucket para publico servindo HTML:
+
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1548277126527",
+    "Statement": [
+        {
+            "Sid": "Stmt1548277124393",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::uzed.com.br",
+                "arn:aws:s3:::uzed.com.br/*"
+            ]
+        }
+    ]
+}
+
+Regra adicionada no CodeBuildBasePolicy
+	{
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::uzed.com.br",
+                "arn:aws:s3:::uzed.com.br/*"
+            ],
+            "Action": [
+                "s3:PutObject",
+                "s3:Get*",
+                "s3:List*"
+            ]
+        }
