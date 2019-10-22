@@ -1,12 +1,11 @@
 ---
-layout: compress
+layout: about
 title:  "Sobre"
 ---
 
 # Sobre
 
 
-### Pessoal
 
 Buscando sempre superar paradigmas, procuro ser pró-ativo em todas as minhas atividades, sempre tem uma maneira melhor de fazer as mesmas coisas.
 Motivado por novas metodologias, sempre estou estudando sobre empreendedorismo e também novas formas de pensamentos que contribuam para o crescimento pessoal e social.
